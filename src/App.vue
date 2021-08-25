@@ -1,19 +1,36 @@
 <template>
   <div id="app">
-     <HeadPortrait src="https://i03piccdn.sogoucdn.com/89a49ed3594f7aef" alt="主页头像" size='150'/>
+     <div class="left">
+      <RouterLink to="/view1">vue1</RouterLink>
+
+       <RouterLink to="/view2">vue2</RouterLink>
+     </div>
+
+      <div class="reds">
+        <RouterView/>
+      </div>
+      <RouterView/>
   </div>
 </template>
 
 <script>
-import HeadPortrait from "@/components/HeadPortrait";
+import Icon from "@/components/Icon";
 
 export default {
   name: 'App',
   components: {
-    HeadPortrait,
+    Icon,
   }
 }
 </script>
 <style lang="less" scoped>
-
+.left{
+  float:left;
+}
+  .reds{
+    float:right;
+    width:500px;
+    height:500px;
+    border:1px solid;
+  }
 </style>
