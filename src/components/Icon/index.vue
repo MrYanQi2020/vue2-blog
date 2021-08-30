@@ -25,5 +25,7 @@ export default {
 <style lang="less" scoped>
 i {
   display: inline-block;
+    text-align: center;
+
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="Head-portrait-container">
+  <div class="HeadPortrait-container">
       <img :src="src" :alt="alt" :style="{width:size+'px',height:size+'px'}">
   </div>
 </template>
@@ -28,13 +28,16 @@ export default {
 </script>
 
 <style lang="less" scoped>
-    .Head-portrait-container{
+    .HeadPortrait-container{
         width:100%;
         height:100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
         img{
             display:inline-block;
             border-radius:50%;
-
+            cursor: pointer;
         }
     }
 

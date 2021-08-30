@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-container">
+  <div class="Layout-container">
     <!-- 侧边栏 -->
     <div class="left">
       <slot name="left"></slot>
