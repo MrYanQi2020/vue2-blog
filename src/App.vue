@@ -2,9 +2,7 @@
     <div id="app">
         <Layout>
             <template #left>
-                <div class="left-side">
-                    <LeftAside/>
-                </div>
+               <LeftAside/>
             </template>
             <template #center>
                 <RouterView/>
