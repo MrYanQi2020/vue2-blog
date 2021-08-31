@@ -5,9 +5,9 @@ import Message from "@/views/Message";
 import Project from "@/views/Project";
 
 export default [
-    {path:'/About',component:About},
-    {path:'/Blog',component:Blog},
-    {path:'/Home',component:Home},
-    {path:'/Message',component:Message},
-    {path:'/Project',component:Project},
+    {name:'About',path:'/About',component:About},
+    {name:"Blog",path:"/Blog",component:Blog},
+    {name:'Home',path:'/Home',component:Home},
+    {name:'Message',path:'/Message',component:Message},
+    {name:'Project',path:'/Project',component:Project},
 ]

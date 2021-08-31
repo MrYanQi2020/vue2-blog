@@ -3,7 +3,7 @@
         <el-row class="tac">
             <el-col>
                 <el-menu  router default-active="2" class="el-menu-vertical-demo" text-color="#fff" active-text-color="#ffd04b">
-                    <el-menu-item  v-for="item in items" :key="item.link" :index="item.link" :exact="item.exact">
+                    <el-menu-item  v-for="item in items" :key="item.link" :index="item.path">
                             <Icon :type="item.icon" />
                             <span slot="title" v-text="item.title"></span>
                     </el-menu-item>
@@ -25,28 +25,27 @@ export default {
         return {
             items: [
                 {
-                    link: "/",
+                    path:{name:"Home"},
                     title: "首页",
                     icon: "home",
                 },
                 {
-                    link: "/blog",
+                    path:{name:"Blog"},
                     title: "文章",
                     icon: "blog",
                 },
                 {
-                    link: "/about",
+                    path:{name:"About"},
                     title: "关于我",
                     icon: "about",
-                    exact : false,
                 },
                 {
-                    link: "/project",
+                    path:{name:"Project"},
                     title: "项目&效果",
                     icon: "code",
                 },
                 {
-                    link: "/message",
+                    path:{name:"Message"},
                     title: "留言板",
                     icon: "chat",
                 },
