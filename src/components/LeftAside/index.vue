@@ -5,7 +5,7 @@
             <h1>颜七的小窝</h1>
         </div>
         <div class="Menu">
-            <Menu />
+            <Menus />
         </div>
         <div class="Link">
             <Link />
@@ -14,14 +14,14 @@
 </template>
 
 <script>
-import Menu from "./Menu";
+import Menus from "./Menus";
 import Link from "./Link";
 import HeadPortrait from "@/components/HeadPortrait";
 
 export default {
     name: "LeftAside",
     components: {
-        Menu,
+        Menus,
         Link,
         HeadPortrait,
     },

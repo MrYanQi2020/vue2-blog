@@ -19,7 +19,7 @@ export default {
             default:"这是一张占位头像"
         },
         size:{
-            type:String,
+            type:Number,
             require:false,
             default:100
         }

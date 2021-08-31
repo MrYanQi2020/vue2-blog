@@ -2,10 +2,14 @@
   <div id="app">
     <Layout>
       <template #left>
-        <div class="leftAside">左侧</div>
+        <div class="leftAside">
+          左侧
+          </div>
       </template>
       <template #center>
-        <div class="main">内容</div>
+        <div class="main">
+          内容
+        </div>
       </template>
     </Layout>
   </div>

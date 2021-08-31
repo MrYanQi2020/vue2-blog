@@ -1,11 +1,11 @@
 <template>
-    <div class="Menu-container">
+    <div class="Menus-container">
         <el-row class="tac">
             <el-col>
-                <el-menu default-active="2" class="el-menu-vertical-demo" text-color="#fff" active-text-color="#ffd04b">
-                    <el-menu-item v-for="item in items" :key="item.link" :index="item.link">
-                        <Icon :type="item.icon" />
-                        <span slot="title" v-text="item.title"></span>
+                <el-menu  router default-active="2" class="el-menu-vertical-demo" text-color="#fff" active-text-color="#ffd04b">
+                    <el-menu-item  v-for="item in items" :key="item.link" :index="item.link" :exact="item.exact">
+                            <Icon :type="item.icon" />
+                            <span slot="title" v-text="item.title"></span>
                     </el-menu-item>
                 </el-menu>
             </el-col>
@@ -17,7 +17,7 @@
 import Icon from "@/components/Icon";
 
 export default {
-    name: "menu",
+    name: "menus",
     components: {
         Icon,
     },
@@ -38,6 +38,7 @@ export default {
                     link: "/about",
                     title: "关于我",
                     icon: "about",
+                    exact : false,
                 },
                 {
                     link: "/project",
@@ -68,9 +69,9 @@ a {
     color: inherit;
     text-decoration: none;
 }
-.Menu-container {
+.Menus-container {
     width: 100%;
-    height:100%;
+    height: 100%;
     .Icon-container {
         width: 25px;
         margin-right: 5px;
@@ -81,8 +82,8 @@ a {
         border: none;
     }
     .el-menu-item {
-        font-size:15px;
-        padding-left:35px !important;
+        font-size: 15px;
+        padding-left: 35px !important;
         &.is-active,
         &:focus,
         &:hover {
