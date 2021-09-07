@@ -2,11 +2,8 @@ module.exports = {
     devServer: {
       proxy: {
           '/api':{
-              target:'https://market.douban.com',
+              target:'https://www.iconfont.cn',
           },
-          '/j':{
-            target:'https://movie.douban.com',
-          }
       }
     }
   }
