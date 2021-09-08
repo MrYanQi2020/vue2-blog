@@ -2,12 +2,17 @@ export default {
     data() {
         return {
             data: [],
-            islodaing:true,
+        }
+    },
+    computed:{
+        islodaing(){
+            return !(this.data);
         }
     },
     async created() {
         this.data = await this.fetchData();
-        this.islodaing = false;
+        console.log(this.data);
     },
+   
 }
 
