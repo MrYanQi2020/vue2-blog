@@ -1,13 +1,6 @@
 <template>
-    
-    <div>
-      <h1>关于me</h1>
-      <ul>
-        <!-- <li v-for="item in data" :key="item.title">
-            <h5 v-text="item.title"></h5>
-            <img :src="item.img">
-        </li> -->
-      </ul>
+    <div class="about-container" v-myloading="islodaing">
+      <h1>{{data.csrf}}</h1>
     </div>
 </template>
 
@@ -23,9 +16,13 @@ export default {
         return await getmsg();
       }
     },
-    
 };
 </script>
 
-<style>
+<style lang="less" scoped>
+  .about-container{
+    display: flow-root;
+    width:100%;
+    height:100%;
+  }
 </style>

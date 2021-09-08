@@ -1,11 +1,13 @@
 export default {
     data() {
         return {
-            data: []
+            data: [],
+            islodaing:true,
         }
     },
     async created() {
         this.data = await this.fetchData();
+        this.islodaing = false;
     },
 }
 

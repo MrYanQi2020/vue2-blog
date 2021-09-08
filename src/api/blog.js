@@ -6,7 +6,7 @@ import ins from "./index.js"
   }catch(err){
     // console.log(err);
     if(err.toString()=='Error: Request failed with status code 500'){
-      alert('网络异常');
+       alert('网络异常');
     }
   }
 }

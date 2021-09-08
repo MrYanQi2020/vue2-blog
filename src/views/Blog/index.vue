@@ -1,5 +1,7 @@
 <template>
-    <h1>文章</h1>
+    <div class="blog-container" v-myloading="islodaing">
+
+    </div>
 </template>
 
 <script>
@@ -17,5 +19,10 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less" scoped>
+    .blog-container{
+         display: flow-root;
+         width:100%;
+         height:100%;
+    }
 </style>
