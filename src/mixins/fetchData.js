@@ -1,17 +1,14 @@
+
 export default {
     data() {
         return {
             data: [],
-        }
-    },
-    computed:{
-        islodaing(){
-            return !(this.data);
+            isloading:true,
         }
     },
     async created() {
         this.data = await this.fetchData();
-        console.log(this.data);
+        this.isloading = false;
     },
    
 }

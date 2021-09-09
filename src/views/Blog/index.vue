@@ -1,5 +1,5 @@
 <template>
-    <div class="blog-container" v-myloading="islodaing">
+    <div class="blog-container" v-myloading="isloading">
 
     </div>
 </template>

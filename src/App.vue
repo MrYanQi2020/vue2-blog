@@ -1,8 +1,8 @@
 <template>
-    <div id="app">
+    <div id="app" >
         <Layout>
             <template #left>
-               <LeftAside/>
+               <LeftAside />
             </template>
             <template #center>
                 <RouterView/>
@@ -25,9 +25,11 @@ export default {
 </script>
 <style lang="less" scoped>
 #app {
+    @sideWidth:240px;
     height: 100vh;
     .LeftAside-container {
-        width: 220px;
+        width: calc(@sideWidth + 16px);
+        overflow-y: auto;
     }
 }
 </style>

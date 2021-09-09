@@ -1,11 +1,15 @@
-import ins from "./index.js"
+import ins from "./"
+import {showMessage} from "@/utils"
+
  async function getmsg() {
   try{
     return await ins.get('/api/pubinfo.json');
   }catch(err){
-    if(err.toString()=='Error: Request failed with status code 500'){
-      console.log('网络异常')
-    }
+    showMessage({
+      type:'error',
+      message:err,
+      duration:5,
+    })
   }
 }
 export default getmsg;

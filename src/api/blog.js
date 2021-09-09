@@ -1,13 +1,16 @@
-import ins from "./index.js"
+import ins from "./"
+import {showMessage} from "@/utils"
 
- async function getmsg() {
-  try{
+async function getmsg() {
+  try {
+
     return await ins.get('/api/common/indexConfig.json?t=1630992533585&ctoken=WAAj7rUxmGw4uOi4IkHWhdi7');
-  }catch(err){
-    // console.log(err);
-    if(err.toString()=='Error: Request failed with status code 500'){
-       console.log('网络异常')
-    }
+  } catch (err) {
+    showMessage({
+      type:'error',
+      message:err,
+      duration:5,
+    })
   }
 }
 export default getmsg;

@@ -1,5 +1,6 @@
 <template>
-    <div class="about-container" v-myloading="islodaing">
+    <div class="about-container" v-myloading="isloading">
+        <h1>关于我</h1>
     </div>
 </template>
 

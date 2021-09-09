@@ -1,7 +1,7 @@
 <template>
   <div class="Layout-container">
     <!-- 侧边栏 -->
-    <div class="left">
+    <div class="left" ref="left">
       <slot name="left"></slot>
     </div>
     <!-- 中间内容 -->
@@ -30,6 +30,10 @@ export default {
   .right {
     flex: 0 0 auto;
     overflow: hidden;
+  }
+  .left{
+    // 这一行不通用
+    width:240px;
   }
   .center {
     flex: 1 1 auto;

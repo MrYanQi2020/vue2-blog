@@ -6,8 +6,12 @@ import 'element-ui/lib/theme-chalk/index.css';//引入elemen-ui样式
 import router from "@/router";//导入路由构造函数
 import directiveConfig from "@/directive/myloading.js"
 import "@/mock/index.js";
+import {showMessage} from '@/utils/index';
+
 
 Vue.use(ElementUI);// 使用element-ui插件
+
+Vue.prototype.$showMessage = showMessage;
 
 Vue.directive('myloading',directiveConfig); //v-myloading 指令
 
