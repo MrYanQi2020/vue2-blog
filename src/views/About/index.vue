@@ -1,6 +1,6 @@
 <template>
     <div class="about-container" v-myloading="isloading">
-        <h1>关于我</h1>
+        <h1  ref="about">关于我</h1>
     </div>
 </template>
 

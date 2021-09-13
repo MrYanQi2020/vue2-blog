@@ -3,6 +3,7 @@
 import axios from "axios"; //导入axios
 import {showMessage} from "@/utils";
 
+
 const ins = axios.create();
 ins.interceptors.response.use(res=>{
   try{
@@ -10,7 +11,8 @@ ins.interceptors.response.use(res=>{
       showMessage({
         type:'error',
         message:res.data.msg,
-        // role:'cat',
+        // positionDom:,
+        role:'cat',
       })
       return;
     }

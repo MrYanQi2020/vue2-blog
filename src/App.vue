@@ -5,7 +5,7 @@
                <LeftAside />
             </template>
             <template #center>
-                <RouterView/>
+                <RouterView ref='main'/>
             </template>
         </Layout>
     </div>

@@ -18,8 +18,10 @@ export default function({type='info',message="",iconClass,duration=3,positionDom
     !iconClass && (iconClass = type);
 
     const icon = getVnode(Icon,{type,}); // 获取Icon组件渲染的Dom根元素
-
     const dom = document.createElement('div');//创建元素
+
+    // const positionDoms = getVnode(positionDom,{type,}); 
+    console.log(positionDom);
 
     dom.classList.add(showMessage.messageContainer, showMessage[type]); // 元素添加内容
     $(dom).css('animation-delay',`0s,${duration}s`);
@@ -34,7 +36,7 @@ export default function({type='info',message="",iconClass,duration=3,positionDom
 
     setTimeout(() => {  // 动画结束后的事件 
         // 移除弹出框
-        $(dom).remove();    
+        // $(dom).remove();    
     }, (0.5 + duration)*1000);
     
 }
