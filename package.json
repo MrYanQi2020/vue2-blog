@@ -7,7 +7,9 @@
     "build": "vue-cli-service build",
     "test:layout": "vue serve ./src/components/Layout/test.vue",
     "test:menu": "vue serve ./src/components/LeftAside/test.vue",
-    "test:tree":"vue serve ./src/components/tree/test.vue"
+    "test:tree":"vue serve ./src/components/tree/test.vue",
+    "test:pagin":"vue serve ./src/components/Pagination/test.vue"
+
   },
   "dependencies": {
     "axios": "^0.21.1",

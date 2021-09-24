@@ -36,7 +36,7 @@ export default {
         width:100%;
         height:100%;
         overflow: hidden;
-        background-color:@leftAside_bg;
+        background-color:@leftAside_active_bg;
         .HeadPortait{
             padding:20px 0;
              h1{

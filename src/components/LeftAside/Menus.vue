@@ -1,16 +1,10 @@
 <template>
-    <div class="Menus-container">
-        <el-row class="tac">
-            <el-col>
-                <el-menu  router default-active="2" class="el-menu-vertical-demo" text-color="#fff" active-text-color="#ffd04b">
-                    <el-menu-item  v-for="item in items" :key="item.link" :index="{name:item.name}">
-                            <Icon :type="item.icon" />
-                            <span slot="title" v-text="item.title"></span>
-                    </el-menu-item>
-                </el-menu>
-            </el-col>
-        </el-row>
-    </div>
+    <nav class="Menus-container">
+        <RouterLink :to="{name:item.name}" :exact="item.exact" class="menu-item" v-for="(item,i) in items" :key="i">
+            <Icon :type="item.icon" />
+            <span v-text="item.title">首页</span>
+        </RouterLink>
+    </nav>
 </template>
 
 <script>
@@ -23,32 +17,36 @@ export default {
     },
     data() {
         return {
-            items: 
-            [
+            items: [
                 {
-                    name:"Home",
+                    name: "Home",
                     title: "首页",
                     icon: "home",
+                    exact:true,
                 },
                 {
-                    name:"Blog",
+                    name: "Blog",
                     title: "文章",
                     icon: "blog",
+                    exact:false,
                 },
                 {
-                    name:"About",
+                    name: "About",
                     title: "关于我",
                     icon: "about",
+                    exact:true,
                 },
                 {
-                    name:"Project",
+                    name: "Project",
                     title: "项目&效果",
                     icon: "code",
+                    exact:true,
                 },
                 {
-                    name:"Message",
+                    name: "Message",
                     title: "留言板",
                     icon: "chat",
+                    exact:true,
                 },
             ],
         };
@@ -59,36 +57,42 @@ export default {
 <style lang="less" scoped>
 @import url("~@/style/index.less");
 
-ul,
-li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-a {
-    color: inherit;
-    text-decoration: none;
-}
+@menu-item-fontSize: 15px;
+@Icon-container-fontSize: 18px;
+
 .Menus-container {
     width: 100%;
     height: 100%;
     .Icon-container {
         width: 25px;
         margin-right: 5px;
-        font-size: 18px;
+        font-size: @Icon-container-fontSize;
     }
-    .el-menu-vertical-demo {
-        background-color: @leftAside_bg;
-        border: none;
-    }
-    .el-menu-item {
-        font-size: 15px;
+
+    .menu-item {
+        width: 100%;
+        font-size: @menu-item-fontSize;
+        height: 50px;
         padding-left: 35px !important;
-        &.is-active,
-        &:focus,
+        transition: 0.2s;
         &:hover {
-            background-color: darken(@leftAside_bg, 8%);
+            background-color: darken(@leftAside_active_bg, 6%);
         }
+        > * {
+            display: inline-flex;
+            height: 100%;
+            align-items: center;
+        }
+        span {
+            color: #fff;
+        }
+        .Icon-container {
+            color: @leftAside_icon;
+        }
+    }
+    .router-link-active,
+    .router-link-exact-active {
+        background-color: darken(@leftAside_active_bg, 8%);
     }
 }
 </style>

@@ -73,7 +73,7 @@ a {
         line-height: 56px;
         position: relative;
         i {
-            color: #909399;
+            color: @leftAside_icon;
             margin-right: 5px;
             width: 25px;
             font-size: 16px;
