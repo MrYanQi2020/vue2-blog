@@ -22,31 +22,31 @@ export default {
                     name: "Home",
                     title: "首页",
                     icon: "home",
-                    exact:true,
+                    exact: true,
                 },
                 {
                     name: "Blog",
                     title: "文章",
                     icon: "blog",
-                    exact:false,
+                    exact: false,
                 },
                 {
                     name: "About",
                     title: "关于我",
                     icon: "about",
-                    exact:true,
+                    exact: true,
                 },
                 {
                     name: "Project",
                     title: "项目&效果",
                     icon: "code",
-                    exact:true,
+                    exact: true,
                 },
                 {
                     name: "Message",
                     title: "留言板",
                     icon: "chat",
-                    exact:true,
+                    exact: true,
                 },
             ],
         };
@@ -75,6 +75,14 @@ export default {
         height: 50px;
         padding-left: 35px !important;
         transition: 0.2s;
+        &.router-link-active,
+        &.router-link-exact-active {
+            background-color: darken(@leftAside_active_bg, 8%);
+            > span,
+            > .Icon-container {
+                color: @leftAside_active_color !important;
+            }
+        }
         &:hover {
             background-color: darken(@leftAside_active_bg, 6%);
         }
@@ -89,10 +97,6 @@ export default {
         .Icon-container {
             color: @leftAside_icon;
         }
-    }
-    .router-link-active,
-    .router-link-exact-active {
-        background-color: darken(@leftAside_active_bg, 8%);
     }
 }
 </style>
