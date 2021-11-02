@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import getmsg from "@/api/blog.js";
+import * as blogApi from "@/api/blog.js";
 import mymixins from "@/mixins/fetchData.js";
 
 export default {
@@ -13,7 +13,7 @@ export default {
     mixins: [mymixins],
     methods: {
         async fetchData() {
-            return await getmsg();
+            return await blogApi.getBlog();
         },
     },
     
