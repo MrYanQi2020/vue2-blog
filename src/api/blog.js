@@ -2,7 +2,12 @@ import ins from "./"
 import {showMessage} from "@/utils"
 
 // 分页获取博客数据
-export async function getBlog(page=1,limit=10,categoryid=-1) {
+/**
+ * 
+ * @param {page:当前页数,limit:每页多少条数据,category:分类()} param0 
+ * @returns 
+ */
+export async function getBlog({page=1,limit=10,categoryid=-1}={}) {
   try {
 
     return await ins.get('/api/blog',{

@@ -7,9 +7,8 @@
     "build": "vue-cli-service build",
     "test:layout": "vue serve ./src/components/Layout/test.vue",
     "test:menu": "vue serve ./src/components/LeftAside/test.vue",
-    "test:tree":"vue serve ./src/components/tree/test.vue",
-    "test:pagin":"vue serve ./src/components/Pagination/test.vue"
-
+    "test:tree": "vue serve ./src/components/tree/test.vue",
+    "test:pagin": "vue serve ./src/components/Pagination/test.vue"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -17,6 +16,7 @@
     "element-ui": "^2.15.5",
     "jquery": "^3.6.0",
     "mockjs": "^1.1.0",
+    "query-string": "^7.0.1",
     "vue": "^2.6.11",
     "vue-router": "^3.5.2"
   },

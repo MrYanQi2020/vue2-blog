@@ -13,7 +13,7 @@ export default {
     mixins: [mymixins],
     methods: {
         async fetchData() {
-            return await blogApi.getBlog();
+            return await blogApi.getBlog({page:2,limit:15});
         },
     },
     
