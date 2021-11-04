@@ -23,20 +23,23 @@ Mock.mock(/^\/api\/blog(\?.+)?$/,'get',function(option){
         code:0,
         msg:"数据异常",
         'data|10-20':{
-            total: 786,  // 总数
-            ['row'|limit||5]: [     // 当前页列表数据 取决limit
+            'total|2000-3000': 0,  // 总数
+            [`row|${limit||5}`]: [     // 当前页列表数据 取决limit
                 {
-                    'id|+1':1,
-                    title: "@title",
-                    description: "@text",
+                    id:"@guid",
+                    title: "@ctitle(1,50)",
+                    description: "@cparagraph(1, 10)",
                     category: {  // 所属分类
-                        id: '@id',
-                        name: "@name"
+                        'id|1-10': '0',
+                        name: "分类@id"
                     },
-                    scanNumber: 10,
-                    commentNumber: 30,
-                    thumb: "缩略图地址",
-                    createDate: 1604976798936
+                    'scanNumber|0-3000': 0,
+                    'commentNumber|0-300': 0,
+                    'thumb|1': [
+                        Mock.Random.image("300x250", "#000", "#fff", "Random Image"),
+                        null,
+                      ],
+                    createDate: `@date('T')`,
                 }
             ]
         }

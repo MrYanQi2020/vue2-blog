@@ -9,6 +9,7 @@ export default [
         {path:''}
     ]},
     {name:"Blog",path:"/Blog",component:Blog},
+    {name:"categoryBlog",path:"/Blog/:category",component:Blog},
     {name:'Home',path:'/',component:Home},
     {name:'Message',path:'/Message',component:Message},
     {name:'Project',path:'/Project',component:Project},

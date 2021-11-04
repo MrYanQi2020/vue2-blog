@@ -1,6 +1,6 @@
 <template>
     <div class="blog-container" v-myloading="isloading">
-
+        <h2> 文章{{$route.params.category && ' 分类'+ $route.params.category}} 第{{$route.query.page||1}}页</h2>
     </div>
 </template>
 
@@ -16,7 +16,6 @@ export default {
             return await blogApi.getBlog({page:2,limit:15});
         },
     },
-    
 };
 </script>
 
