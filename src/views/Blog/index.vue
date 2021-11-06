@@ -1,21 +1,33 @@
 <template>
-    <div class="blog-container" v-myloading="isloading">
-        <h2> 文章{{$route.params.category && ' 分类'+ $route.params.category}} 第{{$route.query.page||1}}页</h2>
+    <div class="blog-container" >
+       <Layout>
+           <template #center>
+            <BlogList/>
+           </template>
+            <template #right>
+               
+           </template>
+       </Layout>
     </div>
 </template>
 
 <script>
-import * as blogApi from "@/api/blog.js";
-import mymixins from "@/mixins/fetchData.js";
+
+import Layout from "@/components/Layout";   // 布局组件
+import BlogList from "./BlogList";
 
 export default {
     name: "Blog",
-    mixins: [mymixins],
-    methods: {
-        async fetchData() {
-            return await blogApi.getBlog({page:2,limit:15});
-        },
+    data(){
+        return{
+
+        }
     },
+    components:{
+        Layout,
+        BlogList,
+    },
+   
 };
 </script>
 

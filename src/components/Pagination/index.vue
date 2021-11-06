@@ -10,8 +10,9 @@
 
 <script>
 export default {
+    name:'Pagination',
     props: {
-        current: {
+        current: {  // 当前页数
             type: Number,
             require: false,
             default: 1,
@@ -34,7 +35,7 @@ export default {
     },
     computed:{
         totalPage(){  // 总页数
-            return this.total % this.limit === 0 ? this.total / this.limit : this.total / this.limit + 1;
+            return Math.ceil(this.total / this.limit);
         },
         visibleMin(){
             const visibleMin =  Math.ceil(this.current - this.visibleNumber/2);
@@ -79,6 +80,7 @@ li {
 .pagination-container{
     user-select:none; 
     display:flex;
+    align-items: center;
     overflow: hidden;
     width:100%;
     .pagination-item,

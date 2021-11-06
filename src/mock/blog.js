@@ -23,8 +23,8 @@ Mock.mock(/^\/api\/blog(\?.+)?$/,'get',function(option){
         code:0,
         msg:"数据异常",
         'data|10-20':{
-            'total|2000-3000': 0,  // 总数
-            [`row|${limit||5}`]: [     // 当前页列表数据 取决limit
+            total: 1000,  // 总数
+            [`rows|${limit||5}`]: [     // 当前页列表数据 取决limit
                 {
                     id:"@guid",
                     title: "@ctitle(1,50)",
