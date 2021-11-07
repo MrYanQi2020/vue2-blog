@@ -24,12 +24,10 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-@sideWidth: 240px;
-
 #app {
     height: 100vh;
     .LeftAside-container {
-        width: calc(@sideWidth);
+        width: 260px;
         
     }
 }

@@ -31,10 +31,6 @@ export default {
     flex: 0 0 auto;
     overflow: hidden;
   }
-  .left{
-    // 这一行不通用
-    width:240px;
-  }
   .center {
     flex: 1 1 auto;
     overflow: hidden;
