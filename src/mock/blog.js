@@ -4,7 +4,7 @@ import qs from 'querystring'
 
 // 获取所有博客分类
 
-Mock.mock('/api/blogType',{
+Mock.mock('/api/blogtype',{
     code:0,
     msg:"数据异常",
     'data|10-20':[

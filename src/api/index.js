@@ -10,7 +10,7 @@ ins.interceptors.response.use(res=>{
     if(res.data.code!==0){
       showMessage({
         type:'error',
-        message:res.data.msg,
+        message:res.data.message,
         // positionDom:,
         role:'cat',
       })

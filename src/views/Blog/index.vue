@@ -37,12 +37,16 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import url("~@/style/index");
+
     .blog-container{
          display: flow-root;
          width:100%;
          height:100%;
          .rightlist{
-             width:240px;
+             width:220px;
+             .scollbar(@thumbBgc:@thumb1);
+             height:100%;
          }
     }
 </style>

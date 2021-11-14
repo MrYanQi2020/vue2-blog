@@ -59,7 +59,6 @@ export default {
   },
   watch:{
        async $route(newValue,old){
-
               const {page,limit} = newValue.query;
               const {categoryid} = newValue.params;
               this.isloading = true;
