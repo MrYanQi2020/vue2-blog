@@ -5,7 +5,9 @@
             <BlogList/>
            </template>
             <template #right>
-               
+               <div class="rightlist">
+                   <RightList/>
+               </div>
            </template>
        </Layout>
     </div>
@@ -15,6 +17,7 @@
 
 import Layout from "@/components/Layout";   // 布局组件
 import BlogList from "./BlogList";
+import RightList from "./RightList.vue";
 
 export default {
     name: "Blog",
@@ -26,6 +29,7 @@ export default {
     components:{
         Layout,
         BlogList,
+        RightList,
     },
    
 };
@@ -36,5 +40,8 @@ export default {
          display: flow-root;
          width:100%;
          height:100%;
+         .rightlist{
+             width:240px;
+         }
     }
 </style>
