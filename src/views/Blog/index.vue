@@ -16,8 +16,8 @@
 <script>
 
 import Layout from "@/components/Layout";   // 布局组件
-import BlogList from "./BlogList";
-import RightList from "./RightList.vue";
+import BlogList from "./components/BlogList";
+import RightList from "./components/RightList";
 
 export default {
     name: "Blog",

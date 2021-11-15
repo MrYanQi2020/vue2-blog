@@ -118,6 +118,7 @@ export default {
 
 
 .BlogList-container {
+  .scollbar(@thumbBgc:@thumb1);
   line-height: 1.7;
   position: relative;
   padding: 20px;

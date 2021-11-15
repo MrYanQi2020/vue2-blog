@@ -3641,11 +3641,7 @@ fill-range@^7.0.1:
 
 filter-obj@^1.1.0:
   version "1.1.0"
-<<<<<<< HEAD
-  resolved "https://registry.nlark.com/filter-obj/download/filter-obj-1.1.0.tgz?cache=0&sync_timestamp=1630003988020&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ffilter-obj%2Fdownload%2Ffilter-obj-1.1.0.tgz#9b311112bc6c6127a16e016c6c5d7f19e0805c5b"
-=======
   resolved "https://registry.nlark.com/filter-obj/download/filter-obj-1.1.0.tgz#9b311112bc6c6127a16e016c6c5d7f19e0805c5b"
->>>>>>> 3653a4f7ac3da135f09495f3b66a41ead7bfce6c
   integrity sha1-mzERErxsYSehbgFsbF1/GeCAXFs=
 
 finalhandler@~1.1.2:
@@ -7085,11 +7081,7 @@ spdy@^4.0.2:
 
 split-on-first@^1.0.0:
   version "1.1.0"
-<<<<<<< HEAD
-  resolved "https://registry.npm.taobao.org/split-on-first/download/split-on-first-1.1.0.tgz?cache=0&sync_timestamp=1618467023656&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsplit-on-first%2Fdownload%2Fsplit-on-first-1.1.0.tgz#f610afeee3b12bce1d0c30425e76398b78249a5f"
-=======
   resolved "https://registry.npm.taobao.org/split-on-first/download/split-on-first-1.1.0.tgz#f610afeee3b12bce1d0c30425e76398b78249a5f"
->>>>>>> 3653a4f7ac3da135f09495f3b66a41ead7bfce6c
   integrity sha1-9hCv7uOxK84dDDBCXnY5i3gkml8=
 
 split-string@^3.0.1, split-string@^3.0.2:
@@ -7195,11 +7187,7 @@ strict-uri-encode@^1.0.0:
 
 strict-uri-encode@^2.0.0:
   version "2.0.0"
-<<<<<<< HEAD
-  resolved "https://registry.npm.taobao.org/strict-uri-encode/download/strict-uri-encode-2.0.0.tgz#b9c7330c7042862f6b142dc274bbcc5866ce3546"
-=======
   resolved "https://registry.nlark.com/strict-uri-encode/download/strict-uri-encode-2.0.0.tgz#b9c7330c7042862f6b142dc274bbcc5866ce3546"
->>>>>>> 3653a4f7ac3da135f09495f3b66a41ead7bfce6c
   integrity sha1-ucczDHBChi9rFC3CdLvMWGbONUY=
 
 string-width@^2.0.0:

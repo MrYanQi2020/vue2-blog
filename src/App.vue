@@ -24,11 +24,13 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+@import url("~@/style/index");
+
 #app {
     height: 100vh;
     .LeftAside-container {
         width: 270px;
-        
+        .scollbar(@thumbBgc:@thumb1);
     }
 }
 </style>
