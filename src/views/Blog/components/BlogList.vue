@@ -59,13 +59,12 @@ export default {
   },
   watch:{
        async $route(newValue,old){
-
-              const {page,limit} = newValue.query;
-              const {categoryid} = newValue.params;
-              this.isloading = true;
-              this.$refs.BlogList.scrollTop=0;
-              this.data = await this.getData({page,limit,categoryid});
-              this.isloading = false;
+        const {page,limit} = newValue.query;
+        const {categoryid} = newValue.params;
+        this.isloading = true;
+        this.$refs.BlogList.scrollTop=0;
+        this.data = await this.getData({page,limit,categoryid});
+        this.isloading = false;
       }
   },
   methods: {
@@ -119,8 +118,6 @@ export default {
 
 
 .BlogList-container {
-  .scollbar(@thumbBgc:@thumb1);
-
   line-height: 1.7;
   position: relative;
   padding: 20px;

@@ -5,7 +5,7 @@
             <BlogList/>
            </template>
             <template #right>
-               
+            <RightList/>
            </template>
        </Layout>
     </div>
@@ -14,7 +14,9 @@
 <script>
 
 import Layout from "@/components/Layout";   // 布局组件
-import BlogList from "./BlogList";
+import BlogList from "./components/BlogList";
+import RightList from "./components/RightList";
+
 
 export default {
     name: "Blog",
@@ -26,6 +28,7 @@ export default {
     components:{
         Layout,
         BlogList,
+        RightList,
     },
    
 };
@@ -33,9 +36,19 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import url("~@/style/index");
+
     .blog-container{
          display: flow-root;
          width:100%;
          height:100%;
+         .BlogList-container{
+             .scollbar(@thumbBgc:@thumb1);
+         }
+         .RightList-container{
+             .scollbar(@thumbBgc:@thumb1);
+             width:240px;
+         }
+         
     }
 </style>

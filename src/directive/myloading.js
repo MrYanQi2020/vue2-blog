@@ -1,5 +1,5 @@
 import $ from "jquery";
-import bidiu from "@/assets/bidiu.gif";
+import bidiu from "@/assets/hero.gif";
 function getLoadImg(){
     return $('img[class=loadImg]')[0];
 }
