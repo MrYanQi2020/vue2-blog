@@ -27,7 +27,7 @@ export default {
 #app {
     height: 100vh;
     .LeftAside-container {
-        width: 260px;
+        width: 270px;
         
     }
 }

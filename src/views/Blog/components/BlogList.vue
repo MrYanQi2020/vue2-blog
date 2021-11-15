@@ -59,12 +59,12 @@ export default {
   },
   watch:{
        async $route(newValue,old){
-        const {page,limit} = newValue.query;
-        const {categoryid} = newValue.params;
-        this.isloading = true;
-        this.$refs.BlogList.scrollTop=0;
-        this.data = await this.getData({page,limit,categoryid});
-        this.isloading = false;
+              const {page,limit} = newValue.query;
+              const {categoryid} = newValue.params;
+              this.isloading = true;
+              this.$refs.BlogList.scrollTop=0;
+              this.data = await this.getData({page,limit,categoryid});
+              this.isloading = false;
       }
   },
   methods: {

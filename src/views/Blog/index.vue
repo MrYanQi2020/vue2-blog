@@ -5,7 +5,9 @@
             <BlogList/>
            </template>
             <template #right>
-            <RightList/>
+               <div class="rightlist">
+                   <RightList/>
+               </div>
            </template>
        </Layout>
     </div>
@@ -14,9 +16,8 @@
 <script>
 
 import Layout from "@/components/Layout";   // 布局组件
-import BlogList from "./components/BlogList";
-import RightList from "./components/RightList";
-
+import BlogList from "./BlogList";
+import RightList from "./RightList.vue";
 
 export default {
     name: "Blog",
@@ -42,13 +43,10 @@ export default {
          display: flow-root;
          width:100%;
          height:100%;
-         .BlogList-container{
+         .rightlist{
+             width:220px;
              .scollbar(@thumbBgc:@thumb1);
+             height:100%;
          }
-         .RightList-container{
-             .scollbar(@thumbBgc:@thumb1);
-             width:240px;
-         }
-         
     }
 </style>
