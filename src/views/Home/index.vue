@@ -1,5 +1,5 @@
 <template>
-    <div class="home-container">
+    <div class="home-container"  v-myloading="isloading">
         <!-- 轮播 -->
         <ul class="carousel" :style="{transform:`translateY(${carouselTanslateY})`} ">
             <li class="carousel-item" v-for="(item) in data" :key="item.id" :style="{backgroundImage:`url(${item.bigImg})`}" @wheel="carouselWheel(data.length,$event)">
@@ -27,6 +27,7 @@
 import Icon from "@/components/Icon";
 import getmsg from "@/api/home.js";
 import fetchData from "@/mixins/fetchData";
+
 
 export default {
     name: "Home",

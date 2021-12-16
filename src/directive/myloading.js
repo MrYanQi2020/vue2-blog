@@ -11,6 +11,7 @@ function createImg(){
     return img;
 }
 export default function (el, bingding) {
+    console.log(bingding);
     const val = bingding.value;
     const img = createImg(); 
     if (val && !getLoadImg()) {

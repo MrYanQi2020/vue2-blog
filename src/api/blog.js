@@ -38,3 +38,16 @@ export async function getBlogType(){
       })
     }
 }
+
+// 获取单个博客详情
+export async function getBlogDetails(id){
+  try{
+    return await ins.get(`/api/blog/${id}`);
+  }catch(err){
+    showMessage({
+      type:'error',
+      message:err,
+      duration:5,
+    })
+  }
+}
