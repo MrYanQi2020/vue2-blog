@@ -32,5 +32,6 @@ export default {
         width: 270px;
         .scollbar(@thumbBgc:@thumb1);
     }
+
 }
 </style>

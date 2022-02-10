@@ -16,7 +16,7 @@ import getVnode from "../getComponentRootDom";
 */
 export default function({type='info',message="",iconClass,duration=3,positionDom=$('body'),role}={}) {
     !iconClass && (iconClass = type);
-
+    console.log(Icon)
     const icon = getVnode(Icon,{type,}); // 获取Icon组件渲染的Dom根元素
     const dom = document.createElement('div');//创建元素
 

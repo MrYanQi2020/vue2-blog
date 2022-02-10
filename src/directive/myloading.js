@@ -10,8 +10,7 @@ function createImg(){
     $(img).css({ 'width': '100px', 'height': '100px', 'position': 'absolute', 'top': '35%', 'left': '50%', 'transform': 'translate(-50%,-50%)' }).addClass('loadImg');
     return img;
 }
-export default function (el, bingding) {
-    console.log(bingding);
+export default function (el, bingding) {    
     const val = bingding.value;
     const img = createImg(); 
     if (val && !getLoadImg()) {

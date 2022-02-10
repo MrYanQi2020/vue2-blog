@@ -8,9 +8,9 @@ export default [
     {name:'About',path:'/About',component:About,children:[
         {path:''}
     ]},
-    {name:"Blog",path:"/Blog",component:Blog},
+    {name:"Blog",path:"/Blog&a",component:Blog},
     {name:"categoryBlog",path:"/Blog/cate/:categoryid",component:Blog},
-    {name:'Home',path:'/',component:Home},
-    {name:'Message',path:'/Message',component:Message},
+    {name:'Home',path:'/Blog&b',component:Home},
+    {name:'Message',path:'//Blog&c',component:Message},
     {name:'Project',path:'/Project',component:Project},
 ]

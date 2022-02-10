@@ -3,6 +3,7 @@ import {showMessage} from "@/utils"
 
  async function getmsg() {
   try{
+    
     return await ins.get('/api/pubinfo.json');
   }catch(err){
     showMessage({

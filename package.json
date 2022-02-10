@@ -11,20 +11,30 @@
     "test:pagin": "vue serve ./src/components/Pagination/test.vue"
   },
   "dependencies": {
+    "@formily/core": "^2.0.5",
+    "@formily/element": "^2.0.5",
+    "@formily/vue": "^2.0.5",
+    "@vue/composition-api": "^1.4.1",
+    "ant-design-vue": "^1.7.8",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
-    "element-ui": "^2.15.5",
+    "element-ui": "^2.15.6",
     "jquery": "^3.6.0",
+    "less": "3.13.1",
+    "less-loader": "5.0.0",
     "mockjs": "^1.1.0",
+    "node-sass": "^7.0.0",
     "query-string": "^7.0.1",
+    "sass": "^1.45.0",
+    "sass-loader": "^10",
+    "scss-loader": "^0.0.1",
     "vue": "^2.6.11",
-    "vue-router": "^3.5.2"
+    "vue-router": "^3.5.2",
+    "webpack": "^4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
-    "less": "^3.0.4",
-    "less-loader": "^5.0.0",
     "vue-template-compiler": "^2.6.11"
   }
 }
