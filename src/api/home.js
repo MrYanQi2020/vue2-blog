@@ -1,4 +1,5 @@
-import ins from "./index";
+import ins from "./"
+import {showMessage} from "@/utils"
 
 async function getmsg(){
     try{
@@ -12,4 +13,15 @@ async function getmsg(){
     }
 }
 
-export default getmsg;
+export async function getBlogDetails(id){
+    try{
+      return await ins.get(`/api/blog/${id}`);
+    }catch(err){
+      showMessage({
+        type:'error',
+        message:err,
+        duration:5,
+      })
+    }
+  }
+  

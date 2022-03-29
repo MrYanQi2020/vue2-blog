@@ -15,7 +15,6 @@ export default function(component,props){
       return vm.$el;
 }
 
-// 1. render工具函数
 // function getVnode(component,props){
 //   const vm = new Vue({
 //       render: (h) => h(component, { props }),
@@ -23,22 +22,57 @@ export default function(component,props){
 //   vm.$mount();
 //   return vm.$el;
 // }
-// 2. render组件工具函数
 // const initComponents = function(components,props,){
 //   return {components,Vnode:getVnode(new Vue().$options.components[components],props)};
 // }
 
-// 1. 选择组件配置
-// const ElBadge = initComponents('ElBadge',{
-//   value:document.getElementById('ElBadge').getAttribute('value'),
-//   type:document.getElementById('ElBadge').getAttribute('type'),
-// })
-// 2. 初始化组件（对render后的组件进行二次修改）
-// const initElBadge = function(ElBadge){
-    // const Vnode = ElBadge.Vnode;
-    // 二次修改
-//   document.getElementById(ElBadge.components).append(Vnode);
+// const getComponentsConfig = function(name,prop){
+//   if(document.getElementById(name)){
+//       return document.getElementById(name).getAttribute(prop);
+//   }
 // }
-// initElBadge(ElBadge);
+// const ElBadgeConfig = {
+//   value:getComponentsConfig('ElBadge','value'),
+//   type:getComponentsConfig('ElBadge','type'),
+// }
+
+// const ElBadge = initComponents('ElBadge',ElBadgeConfig);
+
+// const initElBadge = function(ElBadge){
+
+//   document.getElementById(ElBadge.components) && document.getElementById(ElBadge.components).append(ElBadge.Vnode);
+// }
+// initElBadge(ElBadge)
+
+
+// 图标处理
+// let initIcon = function(){
+//   // 图标类名
+//   const iconStatic = {
+//       'iconx-shenghe':'fa fa-search',
+//       'iconx-ren':'fa fa-trach'
+//   }
+//   // 图标颜色
+//   const iconColor = {
+//       'success':'text-success',
+//       'danger':'text-danger',
+//       'warning':'text-warning',
+//       'primary':'text-primary',
+//       'blue':'text-blue',
+//       'dark':'text-dark',
+//   }
+//   let iconRes={};
+//   for(let sta in iconStatic){
+//       for(let color in iconColor){
+//           iconRes[sta+'-'+color] = iconStatic[sta]+' '+iconColor[color];
+//       }
+//   }
+//   $('[class^=iconx-]').each((i,ele) => {
+//       const classBefore = [...ele.classList].find(f => f.includes('iconx-'));
+//       const classAfter = iconRes[classBefore];
+//       $(ele).removeClass(classBefore).addClass(classAfter);
+//   })
+// }
+
 
 {/* <div id='ElBadge' type='success' value='asdf'></div> */}

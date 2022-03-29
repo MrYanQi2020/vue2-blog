@@ -7,6 +7,11 @@ import router from "@/router";//导入路由构造函数
 import directiveConfig from "@/directive/myloading.js"
 import "@/mock/index.js";
 import {showMessage} from '@/utils/index';
+import _ from "lodash";
+import "@/components/BaseComponent.js"; // 全局注册基本组件
+
+
+
 
 
 Vue.use(ElementUI);// 使用element-ui插件
@@ -14,6 +19,15 @@ Vue.use(ElementUI);// 使用element-ui插件
 Vue.prototype.$showMessage = showMessage;
 
 Vue.directive('myloading',directiveConfig); //v-myloading 指令
+
+
+
+
+
+
+
+
+
 
 new Vue({
   router,

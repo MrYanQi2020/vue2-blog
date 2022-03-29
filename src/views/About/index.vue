@@ -2,18 +2,23 @@
     <div class="about-container">
         <h1 ref="about">关于我</h1>
         <FormProvider :form="form">
-            <SchemaField :schema="schema" />
+            <SchemaField :schema="schema" /> 
             <FormButtonGroup>
                 <Submit @submit="log">提交</Submit>
-                <Reset>重置</Reset>
+                <Reset >重置</Reset>
             </FormButtonGroup>
+             <FormConsumer>
+            <template #default="{ form }">
+                {{ form.values.source }}
+            </template>
+            </FormConsumer>
         </FormProvider>
     </div>
 </template>
 
 <script>
 import { createForm } from "@formily/core"; // 内核库 负责管理表单的状态，表单校验，联动等等。
-import { createSchemaField, FormProvider } from "@formily/vue"; // UI桥接库 负责管理表单的状态，表单校验，联动等等。
+import { createSchemaField, FormProvider,FormConsumer } from "@formily/vue"; // UI桥接库 负责管理表单的状态，表单校验，联动等等。// 类似于Vm
 import {
     FormItem,
     Input,
@@ -23,7 +28,7 @@ import {
     Reset,
 } from "@formily/element"; // 组件库 快速实现漂亮的表单
 
-const fields = createSchemaField({
+const fields = createSchemaField({ // 工厂函数创建@formily/vue里的组件
     components: {
         FormItem,
         Input,
@@ -67,7 +72,7 @@ const schema = {
 };
 export default {
     name: "About",
-    components: { FormProvider, ...fields, Submit, Reset, FormButtonGroup },
+    components: { FormProvider,FormConsumer, ...fields, Submit, Reset, FormButtonGroup },
     data() {
         return {
             form: createForm(),
@@ -76,8 +81,8 @@ export default {
     },
     methods: {
         log(value) {
-            console.log(value);
         },
+        
     },
 };
 </script>

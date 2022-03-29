@@ -33,6 +33,7 @@ Mock.mock(/^\/api\/blog(\?.+)?$/,'get',function(option){
                         'id|1-10': '0',
                         name: "分类@id"
                     },
+                    'sex|1':['男','女'],
                     'scanNumber|0-3000': 0,
                     'commentNumber|0-300': 0,
                     'thumb|1': [
